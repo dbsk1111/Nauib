@@ -1,0 +1,338 @@
+@charset "utf-8"
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+ul,ol,li{ list-style: none; }
+a{ text-decoration: none; }
+
+body{
+  font-family: 'Noto Sans KR', '나눔고딕', 'NanumGothic', 'Nanum Gothic', '돋움',dotum,sans-serif;
+  letter-spacing: -0.5px;
+}
+
+br.before{
+  display: block;
+}
+br.after{
+  display: none;
+}
+
+.flex_column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mont{
+  font-family: 'Montserrat', sans-serif;
+}
+header{
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding-left: 3%;
+  height: 90px;
+  background: #fff;
+  z-index: 100;
+}
+.header_logo{
+  float: left;
+  display: inline-block;
+  width: 144px;
+  height: 30px;
+  font-size: 0;
+  background: url('../img/common/logo2.png');
+}
+#gnb{
+  float: left;
+  margin-left: 114px;
+}
+#gnb a, #lnb .common_submenu a{
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+}
+.common_mainmenu{
+  overflow: hidden;
+}
+.common_mainmenu li{
+  float: left;
+  width: 225px;
+  line-height: 90px;
+}
+#gnb a{
+  padding-left: 40px;
+  color: #222;
+  font-size: 17px;
+  font-weight: 500;
+}
+.common_mainmenu li a:before{
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  left: 0;
+  top: 10px;
+  background: rgba(0,0,0,0.3);
+  /* background: rgba(255,255,255,.3); */
+  transition: all 0.4s;
+}
+#lnb{
+  overflow: hidden;
+  position: absolute;
+  display: none;
+  /* padding: 35px 0 35px 3%; */
+  /* padding-left: 3%; */
+  width: 100%;
+  /* height: 0; */
+  top: 100%;
+  /* bottom: -100%; */
+  left: 0;
+  color: #555;
+  background: #ececec;
+  z-index: 100;
+}
+
+.lnb_inner{
+  overflow: hidden;
+  margin-left: 260px;
+  padding: 35px 0 63px 3%;
+}
+
+.common_submenu{
+  float: left;
+  position: relative;
+  /* min-height: 230px; */
+  /* padding: 35px 0 75px; */
+  /* padding-bottom: 40px; */
+  /* margin-top: 35px; */
+  /* border-left: 1px solid red; */
+}
+.common_submenu:not(:first-child):before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -13px;
+  width: 1px;
+  height: 160px;
+  background: #bbb;
+}
+.common_submenu li{
+  padding-left: 40px;
+  margin-top: 16px;
+  width: 225px;
+}
+
+.common_submenu li:not(:first-child){
+  /* margin-top: 13px; */
+}
+
+#lnb .common_submenu a{
+  color: #666;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.submenu_banner_wrap{
+  float: left;
+  position: relative;
+  /* margin-top: 35px; */
+  width: 285px;
+  background: green;
+}
+.submenu_banner{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 100%;
+  width: 340px;
+  height: 160px;
+  background: url('../img/common/submenu_banner_bg.jpg');
+}
+.submenu_banner_icon{
+  width: 28px;
+  height: 26px;
+  background: url('../img/common/submenu_ico1.png');
+  z-index: 100;
+}
+.submenu_banner_txt{
+  font-size: 24px;
+  color: #fff;
+  margin-top: 15px;
+  /* font-weight: normal; */
+}
+/* 메뉴 버튼 */
+.menu_btn{
+  display: none;
+  position: absolute;
+  padding: 32px 27px;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 90px;
+  background: #2e3092;
+  cursor: pointer;
+  z-index: 1000;
+}
+.menu_btn div{
+  float: right;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  transition: .4s;
+}
+.menu_btn div:not(:first-child){
+  margin-top: 7px;
+}
+.menu_btn div:nth-child(2){
+  width: 75%;
+  transform-origin: right;
+}
+
+.menu_btn.on div:nth-child(1){
+  transform: translateY( 10px ) rotate( -45deg );
+}
+.menu_btn.on div:nth-child(2){
+  transform: scaleX( 0 );
+}
+.menu_btn.on div:nth-child(3){
+  transform: translateY( -10px ) rotate( 45deg );
+}
+
+
+
+
+/* 푸터 */
+footer *{
+  color: rgba(255,255,255,0.6);
+  font-weight: 300;
+}
+
+footer.swiper-slide{
+  background: #1d1d1b;
+  height: 241px;
+  flex-direction: column;
+}
+
+.footer_top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3%;
+  width: 100%;
+  font-size: 18px;
+}
+footer ul{
+  display: flex;
+}
+footer li:not(:first-child){
+  position: relative;
+  margin-left: 13px;
+  padding-left: 12px;
+}
+footer li:not(:first-child):before{
+  content: '';
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 13px;
+  background: #4a4a49;
+  transform: translateY( -50% );
+}
+
+.inquire{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 268px;
+  font-size: 20px;
+  line-height: 70px;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  border-left: 1px solid #4a4a49;
+}
+.inquire_icon{
+  margin-right: 17px;
+  width: 25px;
+  height: 23px;
+  background-size: 100%;
+  background: url('../img/common/foot_ico1.png');
+}
+.footer_bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 35px 3% 85px;
+  width: 100%;
+  font-size: 17px;
+  border-top: 1px solid #4a4a49;
+}
+.footer_text{
+  text-align: left;
+  line-height: 1.5;
+}
+.footer_bottom li:not(:first-child){
+  position: relative;
+  margin-left: 13px;
+  padding-left: 12px;
+}
+.footer_bottom li:not(:first-child):before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 13px;
+  background: #4a4a49;
+  transform: translateY( -50% );
+}
+address{
+  font-style: normal;
+}
+
+
+@media screen and ( max-width: 1400px ){
+  #gnb{ display: none; }
+  .menu_btn{ display: block; }
+
+  /* 모바일 메뉴 */
+  #lnb{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 0 3%;
+    background: #fff;
+  }
+  .common_mainmenu li div{
+    display: block;
+    position: relative;
+    padding: 15px 0;
+    color: #222;
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .mobile_common_submenu{
+    /* display: none; */
+  }
+
+  .submenu_banner{
+    position: relative;
+    margin: 10px 0 60px;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+  }
+}

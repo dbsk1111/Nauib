@@ -1,0 +1,78 @@
+/* 메인 스와이퍼 */
+.swiper-container-vertical>.swiper-pagination-bullets{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -98px;
+  right: 3%;
+  width: 21px;
+  transform: none;
+}
+.swiper-pagination-bullet{
+  position: relative;
+  margin: 6.5px;
+  background: #fff;
+  opacity: 1;
+}
+.swiper-pagination-bullet.black{
+  background-color: #666;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+  margin: 0;
+  width: 21px;
+  height: 21px;
+  border-radius: 0;
+  background: transparent no-repeat center;
+}
+
+.swiper-pagination-bullet-active:after{
+  content: '';
+  position: absolute;
+  display: block;
+  margin: 0 0 0 20px;
+  top: 50%;
+  left: 100%;
+  width: 50px;
+  height: 1px;
+  background: rgba(255,255,255,0.4);
+}
+.swiper-pagination-bullet-active.black:after{
+  background: #666;
+}
+
+.swiper-pagination-bullet-active:nth-child(1){
+  background-image: url('../img/main/fp_nav_ico1.png');
+}
+.swiper-pagination-bullet-active:nth-child(2){
+  background-image: url('../img/main/fp_nav_ico2.png');
+}
+.swiper-pagination-bullet-active:nth-child(3){
+  background-image: url('../img/main/fp_nav_ico3.png');
+}
+.swiper-pagination-bullet-active:nth-child(4){
+  background-image: url('../img/main/fp_nav_ico4.png');
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{
+  margin: 0 0 34px;
+}
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
+  background: blue;
+  display: none;
+}
+
+/* .swiper-slide:first-child{ */
+.swiper-slide:last-child{
+  /* height: auto !important; */
+}
+
+.swiper-slide img {
+  display: inline;
+  width: auto;
+  height: auto;
+  object-fit: none;
+}
+
+.swiper-container.destroy{
+  height: auto;
+}

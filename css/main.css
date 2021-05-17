@@ -1,0 +1,428 @@
+header{
+  position: fixed;
+  transition: all 0.4s;
+}
+
+h2{
+  font-family: "Montserrat";
+  color: #fff;
+  font-weight: 500;
+}
+
+header.main{
+  background: transparent;
+}
+.header_logo{ transition: background .4s; }
+header.main .header_logo{
+  background: url('../img/common/logo1.png');
+}
+#gnb a{ transition: color 0.4s; }
+header.main #gnb a{
+  color: #fff;
+}
+
+header.main #gnb a:before{
+  background: rgba(255,255,255,0.3);
+}
+
+section.swiper-slide{
+  background: center / cover;
+}
+
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  text-align: center;
+}
+#home{
+  flex-direction: column;
+  text-align: center;
+}
+.home_text_area{
+  position: absolute;
+  z-index: 2;
+}
+.home_text_area h2{
+  position: relative;
+  display: block;
+  font-size: 59px;
+}
+.home_text_area p{
+  margin-top: 20px;
+  color: #fff;
+  font-size: 40px;
+}
+/* 배경 벡터 글자 */
+.bg_nau {
+  position: absolute;
+  width: 94%;
+  z-index: 1;
+}
+.bg_nau svg{
+  width: 100%;
+  height: 362px;
+}
+.line1, .line2, .line3 {
+  stroke-dasharray: 2100px;
+  stroke-dashoffset: 2100px;
+  animation: dash 3s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes dash{
+  /* from{ stroke-dashoffset: 2100px; } */
+	to{ stroke-dashoffset: 0; }
+}
+.home_bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../img/main/visual1.jpg') center center / cover;
+  transform: scale( 1.05 );
+  transition: all 2s 1s;
+}
+#home.on .home_bg{
+  transform: scale( 1 );
+}
+
+/* 섹션2 */
+#value .section_title{
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.section_title h2{
+  font-size: 38px;
+}
+.value_list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc( 100% / 3);
+  height: 100%;
+  background: no-repeat center bottom / 100%, center bottom / cover;
+}
+.value_list.no1{
+  background-image: url('../img/main/section1_bg1_n.png'), url('../img/main/section1_bg1.jpg');
+}
+.value_list.no2{
+  background-image: url('../img/main/section1_bg1_a.png'), url('../img/main/section1_bg2.jpg');
+}
+.value_list.no3{
+  background-image: url('../img/main/section1_bg1_u.png'), url('../img/main/section1_bg3.jpg');
+}
+.list_text_wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.list_text_wrap div{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: no-repeat center bottom;
+}
+.value_list.no1 div{
+  background-image: url('../img/main/section1_ico1.png');
+}
+.value_list.no2 div{
+  background-image: url('../img/main/section1_ico2.png');
+}
+.value_list.no3 div{
+  background-image: url('../img/main/section1_ico3.png');
+}
+.list_text_wrap p{
+  margin-top: 30px;
+  line-height: 140%;
+  color: #fff;
+  font-size: 37px;
+}
+.list_text_wrap span{
+  margin-top: 20px;
+  line-height: 180%;
+  color: rgba(255,255,255,0.8);
+  font-size: 17px;
+  font-weight: 300;
+}
+
+/* 섹션3 */
+#aum{
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #fff;
+}
+#aum:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 55%;
+  background: #e7e7e7;
+  /* transform: translateY( -50% ); */
+}
+#aum .section_title {
+  position: relative;
+  /* margin-top: 25px; */
+  margin-top: 150px;
+  z-index: 2;
+}
+#aum h2{
+  color: #000;
+}
+.section_title p{
+  /* margin: 10px 0; */
+  margin: 14px 0;
+  color: #666;
+  font-size: 31px;
+}
+.section_title span{
+  color: #666;
+  font-size: 19px;
+}
+.section_title strong{
+  font-size: 45px;
+  color: #000;
+  font-weight: 600;
+}
+
+/* 섹션 3 스와이퍼 */
+
+#aum .swiper-container{
+  margin-top: 90px;
+  /* top: 0; */
+  display: inline-block;
+  height: auto;
+  overflow: visible;
+  z-index: 1;
+}
+#aum .swiper-wrapper{
+  align-items: flex-end;
+}
+#aum .swiper-slide{
+  flex-direction: column;
+  padding: 0 6%;
+  width: calc( 100%/3 );
+  /* height: 500px; */
+  background: none;
+}
+#aum .swiper-slide:not(:first-child):before{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 1px;
+  height: 100vh;
+  background: #c4c4c4;
+  transform: translateY( -13%);
+  /* transform: translateY( -41.3%); */
+}
+
+#aum .swiper-wrapper{
+  display: flex;
+}
+
+.aum_list_image{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0 6%; */
+  width: 100%;
+  height: 290px;
+  background: no-repeat center / cover;
+}
+#aum .swiper-slide:nth-child(1) .aum_list_image{
+  background-image: url('../img/main/section2_bg1.jpg');
+}
+#aum .swiper-slide:nth-child(2) .aum_list_image{
+  background-image: url('../img/main/section2_bg2.jpg');
+}
+#aum .swiper-slide:nth-child(3) .aum_list_image{
+  background-image: url('../img/main/section2_bg3.jpg');
+}
+.aum_list_image h3{
+  line-height: 45px;
+  color: #fff;
+  font-size: 31px;
+  font-weight: normal;
+}
+.aum_icon{
+  width: 71px;
+  height: 71px;
+  background: no-repeat center;
+}
+#aum .swiper-slide:nth-child(1) .aum_icon{
+  background-image: url('../img/main/section2_ico1.png');
+}
+#aum .swiper-slide:nth-child(2) .aum_icon{
+  background-image: url('../img/main/section2_ico2.png');
+}
+#aum .swiper-slide:nth-child(3) .aum_icon{
+  background-image: url('../img/main/section2_ico3.png');
+}
+.aum_list_text{
+ margin-top: 5px;
+}
+.aum_list_text > div{
+  margin: 20px 0 10px;
+  color: #444;
+  font-size: 21px;
+}
+.aum_list_text .num{
+  font-family: "Montserrat";
+  font-size: 24px;
+  color: #2e3092;
+  font-weight: 700;
+}
+.aum_list_text .counter{
+  font-size: 62px;
+}
+
+
+
+/* 섹션4 */
+#notice > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  padding: 90px 6% 0;
+  height: 100%;
+}
+.notice_area{
+  position: relative;
+  width: calc( 2/3 * 100% );
+  background: #f5f5f5;
+}
+.ir_area{
+  position: relative;
+  width: calc( 1/3 * 100% );
+  background: #272985;
+}
+
+#notice .section_title{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+#notice .section_title h2{
+  color: #111;
+  font-weight: 700;
+}
+#notice .more{
+  font-family: "Montserrat";
+  color: #555;
+  font-size: 11px;
+  font-weight: 600;
+}
+.notice_list{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 100%;
+  border-top: 2px solid #111;
+}
+.item-list{
+  display: inline-block;
+  padding: 35px 30px;
+  text-align: left;
+  word-break: keep-all;
+  border-bottom: 1px solid #ddd;
+}
+.notice_list_date{
+  font-size: 18px;
+  color: #2e3092;
+  font-weight: 600;
+}
+.notice_list_title{
+  margin-top: 17px;
+  color: #222;
+  font-size: 21px;
+  font-weight: 500;
+}
+.notice_list_title + p{
+  display: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  margin-top: 24px;
+  width: 66%;
+  height: 60px;
+  line-height: 1.7;
+  font-size: 17px;
+  color: #555;
+}
+.item-list.on{
+  background: #eee;
+}
+.item-list.on .notice_list_title + p{
+  display: block;
+}
+
+/* ir 영역 */
+#notice .ir_area .section_title h2{
+  color: #fff;
+}
+.ir_area .notice_list{
+  border-top: 2px solid #fff;
+}
+.ir_area .item-list{
+  padding: 40px 0;
+  border-bottom: 1px solid #52549d;
+}
+.ir_area .notice_list_title{
+  margin: 0;
+  line-height: 1.7;
+  font-size: 19px;
+  color: #fff;
+  font-weight: normal;
+}
+
+/* 증권 */
+.stock{
+  font-size: 17px;
+  line-height: 1.6;
+  color: #fff;
+}
+.stock tr > td:first-child{
+  width: 95px;
+  /* vertical-align: middle; */
+}
+.stock tr > td:last-child{
+  font-family: "Montserrat";
+  font-size: 21px;
+  font-weight: 500;
+}
+.stock .present_value{
+  color: #5155f4;
+  font-size: 45px;
+  line-height: 60%;
+}
+
+/* #notice .more */
+#notice .btn{
+  display: block;
+  margin: 50px 0 0;
+  width: 198px;
+  height: 56px;
+  line-height: 54px;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #a9a9ce;
+}
+
+@media screen and ( max-width: 1400px ){
+  .home_text_area h2 { font-size: 55px; }
+  .home_text_area p { font-size: 36px; }
+  #aum .section_title { margin-top: 100px; }
+}
