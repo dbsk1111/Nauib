@@ -21,11 +21,16 @@
   display: block;
   content: '';
   margin: 3px auto 20px;
-  width: 100%;
+  /* width: 100%; */
+  width: 0;
   height: 2px;
   background: #fff;
-  /* transition: width .5s ease-in-out; */
+  transition: all .5s ease-in-out;
   /* animation: widthAni .5s ease-in-out both; */
+}
+
+.page_title.active p:after{
+  width: 100%;
 }
 
 @keyframes widthAni{
