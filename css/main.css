@@ -453,14 +453,15 @@ section{
     padding-bottom: 150px;
   }
   #aum .swiper-slide {
-    width: 476.667px;
+    width: 476px;
   }
   #aum .swiper-slide:not(:first-child):before {
     height: 100%;
     transform: translateY( 0 );
   }
-
-
+  .aum_list_text .counter{
+    font-size: 52px;
+  }
   #notice{
     flex-direction: column;
   }
@@ -555,6 +556,9 @@ section{
   }
   #aum .swiper-container{
     margin-top: 60px;
+  }
+  #aum .swiper-slide {
+    width: 300px;
   }
   .aum_list_image{
     height: 200px;

@@ -92,12 +92,12 @@ swiper-pagination-bullet-active */
 }
 
 /* .hSwiper */
-.swiper-container-horizontal.hSwiper > .swiper-pagination-bullets{
+.swiper-container-horizontal.hSwiper_type2 > .swiper-pagination-bullets{
   position: relative;
   margin-top: 30px;
   bottom: auto;
 }
-.swiper-container-horizontal.hSwiper  > .swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-container-horizontal.hSwiper_type2  > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 10px;
   width: 15px;
   height: 15px;
@@ -105,6 +105,6 @@ swiper-pagination-bullet-active */
   opacity: 1;
 }
 
-.swiper-container-horizontal.hSwiper  > .swiper-pagination-bullets .swiper-pagination-bullet-active{
+.swiper-container-horizontal.hSwiper_type2  > .swiper-pagination-bullets .swiper-pagination-bullet-active{
   background: #2e3092;
 }
