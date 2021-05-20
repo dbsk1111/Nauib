@@ -37,15 +37,11 @@ $(function(){
         }
       },
       slideChangeTransitionStart: function(){
-        // let sildeaa = this.activeIndex;
-        // let thisSlide = this;
-        // '.swiper-container.vSwiper'
-        // if(this.activeIndex == 0){
-        //   $('header').addClass('main')
-        // }else{
-        //   $('header').removeClass('main')
-        // }
-
+        if(this.activeIndex == 0){
+          $('header').addClass('main')
+        }else{
+          $('header').removeClass('main')
+        }
         if( this.activeIndex == 2 ){
           $('.swiper-pagination.vSwiper .swiper-pagination-bullet').addClass('black')
         }else{

@@ -64,8 +64,9 @@ table td:nth-child(1){
   border-radius: 2px;
   box-sizing: border-box;
 }
-table td:nth-child(2){
-  text-align: left;
+table td:nth-child(2) a{
+  display: inline-block;
+  width: 95vw;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

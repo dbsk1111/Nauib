@@ -7,6 +7,7 @@ ul,ol,li{ list-style: none; }
 a{ text-decoration: none; }
 
 body{
+  overflow-x: hidden;
   font-family: 'Noto Sans KR', '나눔고딕', 'NanumGothic', 'Nanum Gothic', '돋움',dotum,sans-serif;
   letter-spacing: -0.5px;
 }
@@ -354,14 +355,16 @@ footer.swiper-slide{
 }
 footer ul{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 footer a{ display: block;}
-footer li:not(:first-child){
+.footer_top li:not(:first-child), .footer_bottom li:not(:first-child){
   position: relative;
   margin-left: 13px;
   padding-left: 12px;
 }
-footer li:not(:first-child):before{
+.footer_top li:not(:first-child):before{
   content: '';
   position: absolute;
   display: block;
@@ -372,6 +375,32 @@ footer li:not(:first-child):before{
   background: #4a4a49;
   transform: translateY( -50% );
 }
+
+.footer_bottom li:not(:first-child):before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 13px;
+  background: #4a4a49;
+  transform: translateY( -50% );
+}
+/* .footer_bottom li:last-child:before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 13px;
+  background: red;
+  transform: translateY( -50% );
+} */
+
+
+
 
 .inquire{
   display: flex;
@@ -403,22 +432,6 @@ footer li:not(:first-child):before{
 .footer_text{
   text-align: left;
   line-height: 1.5;
-}
-.footer_bottom li:not(:first-child){
-  position: relative;
-  margin-left: 13px;
-  padding-left: 12px;
-}
-.footer_bottom li:not(:first-child):before{
-  content: '';
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 1px;
-  height: 13px;
-  background: #4a4a49;
-  transform: translateY( -50% );
 }
 address{
   font-style: normal;
@@ -492,5 +505,9 @@ address{
   }
   .footer_logo img{
     height: 26px;
+  }
+
+  .back_to_top{
+    margin-bottom: 15px;
   }
 }

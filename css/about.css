@@ -104,7 +104,7 @@
   margin: 0 auto 20px;
   width: 40px;
   height: 40px;
-  background: no-repeat center / cover;
+  background: no-repeat center / contain;
 }
 .icon1{ background-image: url('../img/about/m11_list_item1.png'); }
 .icon2{ background-image: url('../img/about/m11_list_item2.png'); }

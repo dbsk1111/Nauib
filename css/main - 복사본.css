@@ -226,8 +226,7 @@ section{
   width: 1px;
   height: 100vh;
   background: #c4c4c4;
-  transform: translateY( -11.2%)
-  /* transform: translateY( -12.3%); */
+  transform: translateY( -12.3%);
   /* transform: translateY( -41.3%); */
 }
 
@@ -439,9 +438,6 @@ section{
   border: 1px solid #a9a9ce;
 }
 
-.back_to_top{
-  display: none;
-}
 
 @media screen and ( max-width: 1560px ){
   .aum_list_text > p{
@@ -471,9 +467,6 @@ section{
   }
   .notice_area, .ir_area{
     width: 100%;
-  }
-  .back_to_top{
-    display: block;
   }
 }
 
