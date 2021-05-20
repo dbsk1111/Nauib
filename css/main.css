@@ -40,6 +40,7 @@ section{
 #home{
   flex-direction: column;
   text-align: center;
+  height: 100vh;
 }
 .home_text_area{
   position: absolute;
@@ -88,6 +89,10 @@ section{
 }
 
 /* 섹션2 */
+#value{
+  height: 100vh;
+}
+
 #value .section_title{
   position: absolute;
   top: 200px;
@@ -127,7 +132,7 @@ section{
   display: inline-block;
   width: 60px;
   height: 60px;
-  background: no-repeat center bottom;
+  background: no-repeat center bottom / contain;
 }
 .value_list.no1 div{
   background-image: url('../img/main/section1_ico1.png');
@@ -154,8 +159,10 @@ section{
 
 /* 섹션3 */
 #aum{
+  overflow: hidden;
   flex-direction: column;
   justify-content: flex-start;
+  height: 100vh;
   background: #fff;
 }
 #aum:before{
@@ -219,14 +226,29 @@ section{
   width: 1px;
   height: 100vh;
   background: #c4c4c4;
-  transform: translateY( -13%);
+  transform: translateY( -12.3%);
   /* transform: translateY( -41.3%); */
 }
 
 #aum .swiper-wrapper{
   display: flex;
+  align-items: flex-start;
 }
 
+#aum .swiper-container {
+  width: 100%;
+}
+
+
+#aum .swiper-slide:nth-child(1) .aum_list_image{
+  background-image: url('../img/main/section2_bg1.jpg');
+}
+#aum .swiper-slide:nth-child(2) .aum_list_image{
+  background-image: url('../img/main/section2_bg2.jpg');
+}
+#aum .swiper-slide:nth-child(3) .aum_list_image{
+  background-image: url('../img/main/section2_bg3.jpg');
+}
 .aum_list_image{
   display: flex;
   flex-direction: column;
@@ -237,15 +259,7 @@ section{
   height: 290px;
   background: no-repeat center / cover;
 }
-#aum .swiper-slide:nth-child(1) .aum_list_image{
-  background-image: url('../img/main/section2_bg1.jpg');
-}
-#aum .swiper-slide:nth-child(2) .aum_list_image{
-  background-image: url('../img/main/section2_bg2.jpg');
-}
-#aum .swiper-slide:nth-child(3) .aum_list_image{
-  background-image: url('../img/main/section2_bg3.jpg');
-}
+
 .aum_list_image h3{
   line-height: 45px;
   color: #fff;
@@ -255,7 +269,7 @@ section{
 .aum_icon{
   width: 71px;
   height: 71px;
-  background: no-repeat center;
+  background: no-repeat center / contain;
 }
 #aum .swiper-slide:nth-child(1) .aum_icon{
   background-image: url('../img/main/section2_ico1.png');
@@ -269,20 +283,23 @@ section{
 .aum_list_text{
  margin-top: 5px;
 }
-.aum_list_text > div{
+.aum_list_text > p{
   margin: 20px 0 10px;
   color: #444;
   font-size: 21px;
 }
 .aum_list_text .num{
+  /* max-height: 62px; */
   font-family: "Montserrat";
   font-size: 24px;
   color: #2e3092;
   font-weight: 700;
+
 }
 .aum_list_text .counter{
   font-size: 62px;
 }
+
 
 
 
@@ -294,7 +311,7 @@ section{
   align-items: center;
   position: relative;
   box-sizing: border-box;
-  padding: 90px 6% 0;
+  padding: 90px 6%;
   height: 100%;
 }
 .notice_area{
@@ -421,8 +438,145 @@ section{
   border: 1px solid #a9a9ce;
 }
 
+
+@media screen and ( max-width: 1560px ){
+  .aum_list_text > p{
+    font-size: 18px;
+  }
+}
+
 @media screen and ( max-width: 1400px ){
-  .home_text_area h2 { font-size: 55px; }
-  .home_text_area p { font-size: 36px; }
-  #aum .section_title { margin-top: 100px; }
+  #gnb{ display: none; }
+  .menu_btn{ display: block; }
+  #aum{
+    height: auto;
+    padding-bottom: 150px;
+  }
+  #aum .swiper-slide {
+    width: 476.667px;
+  }
+  #aum .swiper-slide:not(:first-child):before {
+    height: 100%;
+    transform: translateY( 0 );
+  }
+
+
+  #notice{
+    flex-direction: column;
+  }
+  .notice_area, .ir_area{
+    width: 100%;
+  }
+}
+
+@media screen and ( max-width: 1280px ) {
+  #value {
+    flex-direction: column;
+    height: auto;
+  }
+  #value .section_title h2{ display: none; }
+  .value_list{
+    padding: 60px;
+    width: 100%;
+    align-items: flex-start;
+    background: no-repeat center right / auto 100%, center center / cover;
+  }
+  .value_list.no1{
+    background-image: url('../img/main/section1_bg1_n.png'), url('../img/main/section1_bg1_m.jpg');
+  }
+  .value_list.no2{
+    background-image: url('../img/main/section1_bg1_a.png'), url('../img/main/section1_bg2_m.jpg');
+  }
+  .value_list.no3{
+    background-image: url('../img/main/section1_bg1_u.png'), url('../img/main/section1_bg3_m.jpg');
+  }
+  .list_text_wrap {
+    align-items: flex-start;
+    text-align: left;
+  }
+  #aum{
+    height: auto;
+  }
+}
+@media screen and ( max-width: 768px ) {
+  .before{ display: none; }
+  .after{ display: block; }
+
+  .home_text_area h2 {
+    font-size: 40px;
+  }
+  .home_text_area p {
+    margin-top: 10px;
+    font-size: 26px;
+    line-height: normal;
+  }
+
+  .value_list {
+    align-items: center;
+    padding: 55px;
+    background: center bottom / cover;
+  }
+  .value_list div{
+    width: 36px;
+    height: 36px;
+  }
+  .list_text_wrap p {
+    margin-top: 20px;
+    font-size: 30px;
+  }
+  .list_text_wrap span {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .value_list.no1{
+    background-image: url('../img/main/section1_bg1_m.jpg');
+  }
+  .value_list.no2{
+    background-image: url('../img/main/section1_bg2_m.jpg');
+  }
+  .value_list.no3{
+    background-image: url('../img/main/section1_bg3_m.jpg');
+  }
+
+  #aum {
+    padding-bottom: 100px;
+  }
+  #aum .section_title{
+    margin-top: 100px;
+  }
+  .section_title h2 {
+    font-size: 34px;
+  }
+  .section_title p{
+    font-size: 27px;
+  }
+  .section_title span{
+    font-size: 16px;
+  }
+  #aum .swiper-container{
+    margin-top: 60px;
+  }
+  .aum_list_image{
+    height: 200px;
+  }
+  .aum_icon {
+    width: 50px;
+    height: 50px;
+
+  }
+  .aum_list_image h3{
+    font-size: 27px;
+  }
+  .aum_list_text .num {
+    font-size: 20px;
+  }
+  .aum_list_text .counter {
+    font-size: 40px;
+  }
+  .item-list{
+    padding: 25px;
+  }
+  .notice_list_date{ font-size: 14px; }
+  .notice_list_title{ margin-top: 10px; font-size: 18px; }
+  .stock .present_value{ font-size: 38px; }
 }

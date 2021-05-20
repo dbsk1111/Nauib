@@ -1,10 +1,6 @@
 .title_banner{
   background-image: url('../img/about/st_bg1.jpg');
 }
-.tab_menu li{
-  width: calc( 100%/4 );
-  border: 1px solid #e9e9e9;
-}
 /* 컨텐츠 */
 .content{
   margin: 90px auto 0;
