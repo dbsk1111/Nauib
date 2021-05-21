@@ -70,6 +70,7 @@ table td:nth-child(2) a{
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
 table td:nth-child(3){
   text-align: center;
   min-width: 90px;
@@ -181,6 +182,12 @@ a.current{
   table tbody a{
     font-size: 16px;
   }
+  table td:nth-child(2) a{
+    width: 82vw;
+  }
+  table td.notice_style_wrap + td a{
+    width: calc( 82vw - 45px);
+  }
   table td:nth-child(3){
     font-size: 14px;
   }
@@ -192,10 +199,10 @@ a.current{
     font-size: 12px;
   }
   .paging .prev{
-    margin-right: 20px;
+    margin-right: 2vw;
   }
   .paging .next{
-    margin-left: 20px;
+    margin-left: 2vw;
   }
 
 }

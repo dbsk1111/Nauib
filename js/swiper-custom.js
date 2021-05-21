@@ -44,6 +44,28 @@ $(function(){
         }
         if( this.activeIndex == 2 ){
           $('.swiper-pagination.vSwiper .swiper-pagination-bullet').addClass('black')
+          let wHeight = $(window).innerHeight();
+          let thisScrollTop = $(window).scrollTop();
+          $('.counter').each(function(){
+            if( !$(this).hasClass('on') ){
+              let thisOffset = $(this).offset();
+              if( (thisScrollTop + wHeight) >= thisOffset.top && !$(this).is(':animated') || (thisScrollTop + wHeight) >= $('#aum').offset().top ){
+                $(this).prop('number',0).animate({Counter: $(this).text()},{
+                  duration: 2000,
+                  easing: 'linear',
+                  step: function(now){
+                    $(this).addClass('on');
+                    let commaNum = Math.ceil(now);
+                    if( $(this).hasClass('comma') ){
+                      $(this).text(commaNum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
+                    }else{
+                      $(this).text(Math.ceil(commaNum))
+                    }
+                  }
+                })
+              }
+            }
+          })
         }else{
           $('.swiper-pagination.vSwiper .swiper-pagination-bullet').removeClass('black')
         }
@@ -51,136 +73,10 @@ $(function(){
     },
   })
 
-
-  // var hswiper = new Swiper(".hSwiper", {
-  //   slidesPerView: 4,
-  //   spaceBetween: 30,
-  //   centeredSlides: true,
-  //   pagination: {
-  //   el: ".hSwiper",
-  //     clickable: true,
-  //   },
-  //   on: {
-  //     update: function(){
-  //       console.log('불러오기22');
-  //       if( $(window).width() <= 1400 ){
-  //           this.disable();
-  //           // $('.swiper-container.vSwiper').addClass('disable')
-  //           // $('html, body').css('height','auto')
-  //         }else{
-  //           this.enable();
-  //           // $('.swiper-container.vSwiper').removeClass('disable')
-  //           // $('html, body').css('height','100%')
-  //         }
-  //     },
-  //     resize: function(){
-  //       if( $(window).width() <= 1400 ){
-  //           this.disable();
-  //           // $('.swiper-container.vSwiper').addClass('disable')
-  //           // $('html, body').css('height','auto')
-  //         }else{
-  //           this.enable();
-  //           // $('.swiper-container.vSwiper').removeClass('disable')
-  //           // $('html, body').css('height','100%')
-  //         }
-  //     },
-  //   }
-  // })
-
-
-
-
-
-  // var vswiper = new Swiper(".hSwiper", {
-  //   slidesPerView: "auto",
-  //   // centeredSlides: true,
-  //   speed: 700,
-  //   pagination: {
-  //     el: ".hSwiper",
-  //     clickable: true,
-  //   },
-  //   on: {
-  //     afterInit: function(){
-  //       // console.log('불러오기3');
-  //       // if( $(window).width() <= 1400 ){
-  //       //   // this.enable();
-  //       //
-  //       //   vswiper = new Swiper(".hSwiper", {
-  //       //     slidesPerView: "auto",
-  //       //     centeredSlides: true,
-  //       //     speed: 700,
-  //       //     pagination: {
-  //       //       el: ".hSwiper",
-  //       //       clickable: true,
-  //       //     },
-  //       //   })
-  //       }else{
-  //         this.disable();
-  //       }
-  //     },
-  //     resize: function(){
-  //       this.enable();
-  //       if( $(window).width() <= 1400 ){
-  //
-  //       }else{
-  //         this.disable();
-  //       }
-  //     },
-  //   },
-  // })
-
-
-  // var hswiper = new Swiper(".hSwiper", {
-  //   slidesPerView: "auto",
-  //   // centeredSlides: true,
-  //   speed: 700,
-  //   pagination: {
-  //     el: ".hSwiper",
-  //     clickable: true,
-  //   },
-  // })
-
-//   let hswiper;
-//
-//   hswiperLoad();
-//   function hswiperLoad(){
-//     if( $(window).width() <= 1400 ){
-//       hswiper = new Swiper(".hSwiper", {
-//         slidesPerView: "auto",
-//         centeredSlides: true,
-//         speed: 700,
-//         pagination: {
-//           el: ".hSwiper",
-//           clickable: true,
-//         },
-//       })
-//     }else{
-//       hswiper = new Swiper(".hSwiper", {
-//         slidesPerView: "auto",
-//         speed: 700,
-//         pagination: {
-//           el: ".hSwiper",
-//           clickable: true,
-//         },
-//         on: {
-//           afterInit: function(){
-//             this.disable();
-//           },
-//         },
-//       })
-//     }
-//   }
-//   $(window).resize(function(){
-//     hswiperLoad();
-//   })
-//
-
-
   let hSwiper_type1 = new Swiper(".hSwiper_type1", {
       slidesPerView: "auto",
       centeredSlides: false,
       followFinger: false,
-      speed: 400,
       on: {
         afterInit: function(){
           this.disable();
@@ -202,7 +98,7 @@ $(function(){
   hswiperFunc();
 
   function hswiperFunc(){
-    if( $(window).outerWidth() >= 1400 ){
+    if( $(window).outerWidth() > 1400 ){
       $('.hSwiper_type1').css('display','block')
       $('.hSwiper_type2').css('display','none')
     }else{
@@ -218,78 +114,4 @@ $(function(){
       hswiperFunc();
     }
   })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // hswiper = new Swiper(".hSwiper", {
-  //     slidesPerView: "auto",
-  //     centeredSlides: false,
-  //     followFinger: false,
-  //     speed: 400,
-  //     // pagination: {
-  //     //   el: ".hSwiper",
-  //     //   clickable: true,
-  //     // },
-  //     on: {
-  //       afterInit: function(){
-  //         if( $(window).width() > 1401 ){
-  //           this.disable();
-  //         }
-  //         else{
-  //           hswiper = new Swiper(".hSwiper",{
-  //             slidesPerView: "auto",
-  //             centeredSlides: true,
-  //             speed: 400,
-  //             // followFinger: true,
-  //             pagination: {
-  //               el: ".hSwiper",
-  //               clickable: true,
-  //             },
-  //           })
-  //           this.enable();
-  //         }
-  //       },
-  //       // breakpoints: {
-  //       //   1401: {
-  //       //   },
-  //       //   200: {
-  //       //   },
-  //       //     },
-  //         // },
-  //       // },
-  //     },
-  //   })
-
-  // let hswiper2 = new Swiper(".hSwiper", {
-  //     slidesPerView: "auto",
-  //     centeredSlides: true,
-  //     speed: 700,
-  //     followFinger: false,
-  //     pagination: {
-  //       el: ".hSwiper",
-  //       clickable: true,
-  //     },
-  //     on: {
-  //       afterInit: function(){
-  //         if( $(window).width() <= 1400 ){
-  //           this.disable();
-  //         }else{
-  //
-  //         }
-  //       },
-  //     },
-  //   })
-
 })

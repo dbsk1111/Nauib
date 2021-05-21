@@ -439,6 +439,8 @@ address{
 }
 
 
+
+
 @media screen and ( max-width: 1280px ){
   #gnb{ display: none; }
   .menu_btn{ display: block; }
@@ -506,6 +508,7 @@ address{
   }
   .footer_logo img{
     height: 26px;
+    object-fit: cover;
   }
 
   .back_to_top{

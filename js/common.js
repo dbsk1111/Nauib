@@ -48,38 +48,6 @@ $(function(){
     $('html,body').animate({scrollTop : offsetElem.top},300);
   })
 
-
-  // 스크롤에 따른 카운터 작동
-  // let wHeight = $(window).innerHeight();
-  // countFunc();
-  // $(window).scroll(function(){
-  //   countFunc()
-  // })
-  // function countFunc(){
-  //   let thisScrollTop = $(this).scrollTop();
-  //   // 스크롤 조작 시 카운터 작동
-  //   $('.counter').each(function(){
-  //     if( !$(this).hasClass('on') ){
-  //       let thisOffset = $(this).offset();
-  //       if( (thisScrollTop + wHeight) >= thisOffset.top && !$(this).is(':animated') ){
-  //         $(this).prop('number',0).animate({Counter: $(this).text()},{
-  //           duration: 2000,
-  //           easing: 'linear',
-  //           step: function(now){
-  //             $(this).addClass('on');
-  //             let commaNum = Math.ceil(now);
-  //             if( $(this).hasClass('comma') ){
-  //               $(this).text(commaNum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
-  //             }else{
-  //               $(this).text(Math.ceil(commaNum))
-  //             }
-  //           }
-  //         })
-  //       }
-  //     }
-  //   })
-  // }
-
   // 스크롤 조작 시 카운터 작동
   let wHeight = $(window).innerHeight();
   $(window).scroll(function(){
@@ -87,7 +55,7 @@ $(function(){
     $('.counter').each(function(){
       if( !$(this).hasClass('on') ){
         let thisOffset = $(this).offset();
-        if( (thisScrollTop + wHeight) >= thisOffset.top && !$(this).is(':animated') ){
+        if( (thisScrollTop + wHeight) >= thisOffset.top && !$(this).is(':animated') || (thisScrollTop + wHeight) >= $('#aum').offset().top ){
           $(this).prop('number',0).animate({Counter: $(this).text()},{
             duration: 2000,
             easing: 'linear',

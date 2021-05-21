@@ -8,7 +8,6 @@ $(function(){
   let wHeight = $(window).innerHeight();
   $(window).scroll(function(){
     let thisScrollTop = $(this).scrollTop();
-    console.log(thisScrollTop)
     if(thisScrollTop == 0 ){
       $('header').addClass('main')
     }else{

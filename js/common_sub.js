@@ -7,11 +7,11 @@ $(function(){
   activeFunc();
   function activeFunc(){
     let wHeight = $(window).innerHeight();
-    let addHeight = wHeight*0.2;
+    let addHeight = wHeight*0.1;
     let thisScrollTop = $(this).scrollTop();
     $(".ts").each(function(){
       let thisOffset = $(this).offset();
-      if( thisOffset.top <= (thisScrollTop + wHeight + addHeight) && thisScrollTop < thisOffset.top ){
+      if( thisOffset.top <= (thisScrollTop + wHeight - addHeight) && thisScrollTop < thisOffset.top ){
         $(this).addClass("active");
       }
     })
@@ -23,11 +23,11 @@ $(function(){
   // 스크롤 메서드 바로 활용
   // $(window).scroll(function(){
   //   let wHeight = $(window).innerHeight();
-  //   let addHeight = wHeight*0.2;
+  //   let addHeight = wHeight*0.1;
   //   let thisScrollTop = $(this).scrollTop();
   //   $(".ts").each(function(){
   //     let thisOffset = $(this).offset();
-  //     if( thisOffset.top <= (thisScrollTop + wHeight + addHeight) && thisScrollTop < thisOffset.top ){
+  //     if( thisOffset.top <= (thisScrollTop + wHeight - addHeight) && thisScrollTop < thisOffset.top ){
   //       $(this).addClass("active");
   //     }
   //   })
