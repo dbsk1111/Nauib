@@ -1,3 +1,4 @@
+@charset "utf-8";
 .title_banner{
   display: flex;
   justify-content: center;
@@ -55,11 +56,11 @@
   right: 20px;
   border: 4px solid transparent;
   border-top: 4px solid #000;
-  transform: translateY( calc(-50% -4px));
+  transform: translateY( calc( 50% - 4px ));
   transition: transform 0.3s;
 }
 .local_menu > ul > li.on:not(:first-child):after{
-  transform: translateY( -50% ) rotate( 180deg );
+  transform: translateY( calc( 50% - 8px )) rotate( 180deg );
 }
 .local_menu_home a{
   display: inline-block;
