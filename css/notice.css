@@ -9,14 +9,12 @@
 /* 컨텐츠 */
 .content{
   margin: 0 auto 150px;
-  /* background-image: url('../img/about/m11_bg_img.jpg'); */
 }
 table{
   max-width: 1260px;
   width: 93%;
   margin: 0 auto;
   border-top: 2px solid #000;
-  /* table-layout: fixed; */
 }
 table thead{
   height: 70px;
@@ -47,7 +45,6 @@ table td:nth-child(1){
   font-size: 21px;
 }
 .number{
-  /* min-width: 60px; */
   color: #222;
   font-weight: 500;
   letter-spacing: 1px;
@@ -55,8 +52,6 @@ table td:nth-child(1){
 .notice_style{
   display: inline-block;
   padding: 4px 5px;
-  /* min-height: auto;
-  height: auto; */
   line-height: 1;
   color: #2e3092;
   font-size: 16px;
@@ -71,14 +66,11 @@ table td:nth-child(2) a{
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
 table td:nth-child(3){
   text-align: center;
   min-width: 90px;
   width: 18%;
 }
-
-/* 여기서부터 컨텐츠 본격적으로 넣자 */
 .paging{
   display: flex;
   flex-wrap: wrap;
@@ -88,7 +80,6 @@ table td:nth-child(3){
 .paging a{
   display: inline-block;
   text-align: center;
-  /* vertical-align: top; */
   width: 42px;
   height: 42px;
   line-height: 42px;
@@ -116,14 +107,11 @@ a.current{
   margin-left: 2px;
   background: url('../img/notice/paging_arr4.jpg') center / cover;
 }
-
-
 @media screen and ( max-width: 1280px ){
   .content{
     margin: 0 auto 120px;
   }
   thead{ display: none; }
-  /* table tbody */
   table tbody a{ color: #2c2c2c; font-size: 22px; font-weight: 500; line-height: 31px; text-align: left; }
 
   table tr{
@@ -133,22 +121,16 @@ a.current{
     align-items: center;
     height: auto;
   }
-  /* table td:nth-child(1){
-    display: inline-block;
-    width: auto;
-  } */
   table td.notice_style{
     width: auto;
     display: inline-block;
     margin-right: 10px;
-    /* padding: 4px 3px; */
     min-width: auto;
     color: #2e3092;
     font-size: 16px;
     line-height: 1em;
     letter-spacing: -0.5px;
   }
-
   .number{ display: none; }
   table td:nth-child(1){
     min-width: 45px;
@@ -192,7 +174,6 @@ a.current{
   table td:nth-child(3){
     font-size: 14px;
   }
-
   .paging a{
     width: 30px;
     height: 30px;
@@ -205,5 +186,4 @@ a.current{
   .paging .next{
     margin-left: 2vw;
   }
-
 }

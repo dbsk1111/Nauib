@@ -1,8 +1,4 @@
 $(function(){
-  // const addHeight = 200;
-
-  //차이, scrollTop이 0일때에도 반응하느냐, 안 하느냐
-
   // 함수 따로 만들어서 호출
   activeFunc();
   function activeFunc(){
@@ -19,19 +15,6 @@ $(function(){
   $(window).scroll(function(){
     activeFunc();
   })
-
-  // 스크롤 메서드 바로 활용
-  // $(window).scroll(function(){
-  //   let wHeight = $(window).innerHeight();
-  //   let addHeight = wHeight*0.1;
-  //   let thisScrollTop = $(this).scrollTop();
-  //   $(".ts").each(function(){
-  //     let thisOffset = $(this).offset();
-  //     if( thisOffset.top <= (thisScrollTop + wHeight - addHeight) && thisScrollTop < thisOffset.top ){
-  //       $(this).addClass("active");
-  //     }
-  //   })
-  // })
 
   // 로컬 메뉴 노출
   $('.local_menu > ul > li').click(function(){

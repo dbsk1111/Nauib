@@ -3,13 +3,11 @@ header{
   position: fixed;
   transition: all 0.4s;
 }
-
 h2{
   font-family: "Montserrat";
   color: #fff;
   font-weight: 500;
 }
-
 header.main{
   background: transparent;
 }
@@ -21,15 +19,12 @@ header.main .header_logo{
 header.main #gnb a{
   color: #fff;
 }
-
 header.main #gnb a:before{
   background: rgba(255,255,255,0.3);
 }
-
 section.swiper-slide{
   background: center / cover;
 }
-
 section{
   display: flex;
   justify-content: center;
@@ -71,7 +66,6 @@ section{
   stroke-dasharray: 2100px;
   stroke-dashoffset: 2100px;
   animation: dash 3s ease both;
-  /* animation-fill-mode: forwards; */
 }
 @keyframes dash{
   from{ stroke-dashoffset: 2100px; }
@@ -88,12 +82,10 @@ section{
 #home.on .home_bg{
   transform: scale( 1 );
 }
-
 /* 섹션2 */
 #value{
   height: 100vh;
 }
-
 #value .section_title{
   position: absolute;
   top: 200px;
@@ -173,11 +165,9 @@ section{
   width: 100%;
   height: 55%;
   background: #e7e7e7;
-  /* transform: translateY( -50% ); */
 }
 #aum .section_title {
   position: relative;
-  /* margin-top: 25px; */
   margin-top: 150px;
   z-index: 2;
 }
@@ -185,7 +175,6 @@ section{
   color: #000;
 }
 .section_title p{
-  /* margin: 10px 0; */
   margin: 14px 0;
   color: #666;
   font-size: 31px;
@@ -201,10 +190,8 @@ section{
 }
 
 /* 섹션 3 스와이퍼 */
-
 #aum .swiper-container{
   margin-top: 90px;
-  /* top: 0; */
   display: inline-block;
   height: auto;
   overflow: visible;
@@ -217,7 +204,6 @@ section{
   flex-direction: column;
   padding: 0 6%;
   width: calc( 100%/3 );
-  /* height: 500px; */
   background: none;
 }
 #aum .swiper-slide:not(:first-child):before{
@@ -228,20 +214,14 @@ section{
   height: 100vh;
   background: #c4c4c4;
   transform: translateY( -11.2%)
-  /* transform: translateY( -12.3%); */
-  /* transform: translateY( -41.3%); */
 }
-
 #aum .swiper-wrapper{
   display: flex;
   align-items: flex-start;
 }
-
 #aum .swiper-container {
   width: 100%;
 }
-
-
 #aum .swiper-slide:nth-child(1) .aum_list_image{
   background-image: url('../img/main/section2_bg1.jpg');
 }
@@ -256,7 +236,6 @@ section{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 0 6%; */
   width: 100%;
   height: 290px;
   background: no-repeat center / cover;
@@ -301,10 +280,6 @@ section{
 .aum_list_text .counter{
   font-size: 62px;
 }
-
-
-
-
 /* 섹션4 */
 #notice > div{
   display: flex;
@@ -387,7 +362,6 @@ section{
 .item-list.on .notice_list_title + p{
   display: block;
 }
-
 /* ir 영역 */
 #notice .ir_area .section_title h2{
   color: #fff;
@@ -406,7 +380,6 @@ section{
   color: #fff;
   font-weight: normal;
 }
-
 /* 증권 */
 .stock{
   font-size: 17px;
@@ -415,7 +388,6 @@ section{
 }
 .stock tr > td:first-child{
   width: 95px;
-  /* vertical-align: middle; */
 }
 .stock tr > td:last-child{
   font-family: "Montserrat";
@@ -427,7 +399,6 @@ section{
   font-size: 45px;
   line-height: 60%;
 }
-
 /* #notice .more */
 #notice .btn{
   display: block;
@@ -439,17 +410,14 @@ section{
   text-align: center;
   border: 1px solid #a9a9ce;
 }
-
 .back_to_top{
   display: none;
 }
-
 @media screen and ( max-width: 1560px ){
   .aum_list_text > p{
     font-size: 18px;
   }
 }
-
 @media screen and ( max-width: 1400px ){
   #gnb{ display: none; }
   .menu_btn{ display: block; }
@@ -519,7 +487,6 @@ section{
     font-size: 26px;
     line-height: normal;
   }
-
   .value_list {
     align-items: center;
     padding: 55px;
@@ -546,7 +513,6 @@ section{
   .value_list.no3{
     background-image: url('../img/main/section1_bg3_m.jpg');
   }
-
   #aum {
     padding-bottom: 100px;
   }
@@ -574,7 +540,6 @@ section{
   .aum_icon {
     width: 50px;
     height: 50px;
-
   }
   .aum_list_image h3{
     font-size: 27px;

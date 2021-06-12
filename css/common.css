@@ -11,14 +11,12 @@ body{
   font-family: 'Noto Sans KR', '나눔고딕', 'NanumGothic', 'Nanum Gothic', '돋움',dotum,sans-serif;
   letter-spacing: -0.5px;
 }
-
 br.before{
   display: block;
 }
 br.after{
   display: none;
 }
-
 .flex_column{
   display: flex;
   flex-direction: column;
@@ -28,7 +26,6 @@ br.after{
 .mont{
   font-family: 'Montserrat', sans-serif;
 }
-
 /* 모바일 메뉴 */
 #mobile_lnb{
   display: none;
@@ -70,7 +67,6 @@ br.after{
   height: 4px;
   transform: translateY( -50% );
 }
-
 .category_btn:after{
   right: 8px;
   width: 4px;
@@ -78,18 +74,15 @@ br.after{
   transform: translate( -50%, -50% );
   transition: transform .4s;
 }
-
 .category_btn.on:after{
   transform: translate( -50%, -50% ) rotate( 90deg );
 }
-
 .mobile_common_submenu{
   display: none;
   margin: 10px 0;
   padding: 20px;
   background: #ececec;
 }
-
 .mobile_common_submenu li{
   position: relative;
   padding-left: 15px;
@@ -109,13 +102,10 @@ br.after{
 }
 .mobile_common_submenu a{
   font-family: "Montserrat";
-  /* letter-spacing: -0.5px; */
   color: #666;
   font-size: 22px;
   font-weight: 500;
 }
-
-
 .submenu_banner.mobile{
   position: relative;
   margin: 10px 0 60px;
@@ -123,9 +113,6 @@ br.after{
   width: 100%;
   background-size: cover;
 }
-
-
-
 header{
   display: flex;
   align-items: center;
@@ -181,39 +168,27 @@ header{
   left: 0;
   top: 10px;
   background: rgba(0,0,0,0.3);
-  /* background: rgba(255,255,255,.3); */
   transition: all 0.4s;
 }
 #lnb{
   overflow: hidden;
   position: absolute;
   display: none;
-  /* padding: 35px 0 35px 3%; */
-  /* padding-left: 3%; */
   width: 100%;
-  /* height: 0; */
   top: 100%;
-  /* bottom: -100%; */
   left: 0;
   color: #555;
   background: #ececec;
   z-index: 100;
 }
-
 .lnb_inner{
   overflow: hidden;
   margin-left: 260px;
   padding: 35px 0 63px 3%;
 }
-
 .common_submenu{
   float: left;
   position: relative;
-  /* min-height: 230px; */
-  /* padding: 35px 0 75px; */
-  /* padding-bottom: 40px; */
-  /* margin-top: 35px; */
-  /* border-left: 1px solid red; */
 }
 .common_submenu:not(:first-child):before{
   content: '';
@@ -229,22 +204,15 @@ header{
   margin-top: 16px;
   width: 225px;
 }
-
-.common_submenu li:not(:first-child){
-  /* margin-top: 13px; */
-}
-
 #lnb .common_submenu a{
   color: #666;
   font-size: 17px;
   font-weight: 600;
   letter-spacing: -0.5px;
 }
-
 .submenu_banner_wrap{
   float: left;
   position: relative;
-  /* margin-top: 35px; */
   width: 285px;
   background: green;
 }
@@ -269,7 +237,6 @@ header{
   font-size: 24px;
   color: #fff;
   margin-top: 15px;
-  /* font-weight: normal; */
 }
 /* 메뉴 버튼 */
 .menu_btn{
@@ -298,7 +265,6 @@ header{
   width: 75%;
   transform-origin: right;
 }
-
 .menu_btn.on div:nth-child(1){
   transform: translateY( 10px ) rotate( -45deg );
 }
@@ -308,26 +274,21 @@ header{
 .menu_btn.on div:nth-child(3){
   transform: translateY( -10px ) rotate( 45deg );
 }
-
 #mobile_lnb{
   display: none;
 }
-
-
 /* 푸터 */
 footer *{
   color: rgba(255,255,255,0.6);
   font-weight: 300;
   word-break: keep-all;
 }
-
 footer.swiper-slide{
   position: relative;
   flex-direction: column;
   background: #1d1d1b;
   height: 241px;
 }
-
 .back_to_top{
   position: absolute;
   margin-bottom: 40px;
@@ -342,7 +303,6 @@ footer.swiper-slide{
   border: 1px solid rgba(255,255,255,0.8);
   background: rgba(0,0,0,0.5) url('../img/common/btn_top.png');
 }
-
 .footer_top{
   display: flex;
   justify-content: space-between;
@@ -376,7 +336,6 @@ footer a{ display: block;}
   background: #4a4a49;
   transform: translateY( -50% );
 }
-
 .footer_bottom li:not(:first-child):before{
   content: '';
   display: block;
@@ -388,21 +347,6 @@ footer a{ display: block;}
   background: #4a4a49;
   transform: translateY( -50% );
 }
-/* .footer_bottom li:last-child:before{
-  content: '';
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 10px;
-  height: 13px;
-  background: red;
-  transform: translateY( -50% );
-} */
-
-
-
-
 .inquire{
   display: flex;
   justify-content: center;
@@ -437,17 +381,10 @@ footer a{ display: block;}
 address{
   font-style: normal;
 }
-
-
-
-
 @media screen and ( max-width: 1280px ){
   #gnb{ display: none; }
   .menu_btn{ display: block; }
-
-
 }
-
 @media screen and ( max-width: 768px ){
   br.before{ display: none; }
   br.after{ display: block; }
@@ -469,7 +406,6 @@ address{
   .mobile_common_submenu a {
     font-size: 18px;
   }
-
   footer *{
     font-size: 14px;
   }
@@ -510,7 +446,6 @@ address{
     height: 26px;
     object-fit: cover;
   }
-
   .back_to_top{
     margin-bottom: 15px;
   }

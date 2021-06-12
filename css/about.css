@@ -26,7 +26,6 @@
   top: 0;
   background: #fff;
 }
-
 .content li{
   display: flex;
   flex-direction: column;
@@ -56,14 +55,12 @@
 }
 .item_title:before{ margin-bottom: 27px;}
 .item_title:after{ margin-top: 27px;}
-
 .list_1{ order: 1; }
 .list_2{ order: 2; }
 .list_3{ order: 3; }
 .list_4{ order: 4; }
 .list_5{ order: 5; }
 .list_6{ order: 6; }
-
 .list_1, .list_6{
   background: #fff;
 }
@@ -73,32 +70,6 @@
 .list_5{
   background: #0095ba;
 }
-
-
-/* .number:before{
-  content: '';
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  top: -15px;
-  width: 40px;
-  height: 40px;
-  background: no-repeat;
-}
-
-.list_1 .number:before{
- background-image: url('../img/about/m11_list_item1.png');
-}
-.list_3 .number:before{
- background-image: url('../img/about/m11_list_item2.png');
-}
-.list_5 .number:before{
- background-image: url('../img/about/m11_list_item3.png');
-}
-.list_6 .number:before{
- background-image: url('../img/about/m11_list_item4.png');
-} */
-
 .about_icon{
   position: relative;
   display: block;
@@ -111,8 +82,6 @@
 .icon2{ background-image: url('../img/about/m11_list_item2.png'); }
 .icon3{ background-image: url('../img/about/m11_list_item3.png'); }
 .icon4{ background-image: url('../img/about/m11_list_item4.png'); }
-
-
 .number:after{
   content: '';
   display: block;
@@ -121,7 +90,6 @@
   height: 1px;
   background: #000;
 }
-
 .white p{
   color: #fff;
 }
@@ -142,9 +110,7 @@
 .counter.magenta{
   color: #c6168d;
 }
-
 .list_title{
-  /* margin-top: 22px; */
   font-size: 30px;
   color: #111;
   line-height: 1em;
@@ -156,23 +122,18 @@
   font-size: 18px;
   font-weight: 300;
 }
-
-
 @media screen and ( max-width: 1280px ){
   .content li { width: 50%; height: 28vw; min-height: auto; }
   .list_3{ order: 4; }
   .list_4{ order: 3; }
   .content { padding: 125px 0; }
 }
-
 @media screen and ( max-width: 1100px ){
   .content li { height: 48vw; }
 }
-
 @media screen and ( max-width: 768px ){
   .content:before, .content:after{ height: 25px; }
   .content:before{ top: -25px; }
-
   .about_icon { width: 30px; height: 30px; }
   .number{ font-size: 2.6vw; }
   .counter{ font-size: 9vw }

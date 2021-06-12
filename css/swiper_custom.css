@@ -1,18 +1,4 @@
 @charset "utf-8";
-/* 메인 스와이퍼 */
-
-/* swiper-pagination
-vSwiper
-swiper-pagination-clickable
-swiper-pagination-bullets
-swiper-container-initialized
-swiper-container-vertical
-swiper-container-pointer-events */
-
-/* swiper-pagination-bullet
-swiper-pagination-bullet-active */
-
-
 /* 수직 슬라이더 컨테이너 영역 */
 .vSwiper.swiper-container-vertical>.swiper-pagination-bullets{
   display: flex;
@@ -23,7 +9,6 @@ swiper-pagination-bullet-active */
   width: 21px;
   transform: none;
 }
-
 /* 수직 페이지네이션 */
 .swiper-pagination.vSwiper .swiper-pagination-bullet{
   position: relative;
@@ -75,23 +60,12 @@ swiper-pagination-bullet-active */
   height: auto;
   object-fit: none;
 }
-
-
-.swiper-container.vSwiper.disable{
-
-}
-
-/* .swiper-container.vSwiper.disable #home{
-  height: 100vh;
-} */
-
 .swiper-container.vSwiper.disable .swiper-slide{
   height: auto;
 }
 .swiper-container.vSwiper.disable .swiper-pagination.vSwiper{
   display: none;
 }
-
 /* .hSwiper */
 .swiper-container-horizontal.hSwiper_type2 > .swiper-pagination-bullets{
   position: relative;
@@ -105,7 +79,6 @@ swiper-pagination-bullet-active */
   background: #c4c4c4;
   opacity: 1;
 }
-
 .swiper-container-horizontal.hSwiper_type2  > .swiper-pagination-bullets .swiper-pagination-bullet-active{
   background: #2e3092;
 }
