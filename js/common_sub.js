@@ -9,8 +9,7 @@ $(function(){
       let thisOffset = $(this).offset();
       if( thisOffset.top <= (thisScrollTop + wHeight - addHeight) && thisScrollTop < thisOffset.top ){
         $(this).addClass("active");
-        let dataSrc = $(this).find('.lazy').attr('data-src');
-        $(this).find('.lazy').attr('src', dataSrc)
+        $(this).find('.lazy').attr('src', $(this).find('.lazy').attr('data-src'))
       }
     })
   }
