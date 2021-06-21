@@ -9,6 +9,8 @@ $(function(){
       let thisOffset = $(this).offset();
       if( thisOffset.top <= (thisScrollTop + wHeight - addHeight) && thisScrollTop < thisOffset.top ){
         $(this).addClass("active");
+      }
+      if( thisOffset.top <= (thisScrollTop + wHeight) && thisScrollTop < thisOffset.top ){
         $(this).find('.lazy').attr('src', $(this).find('.lazy').attr('data-src'))
       }
     })
