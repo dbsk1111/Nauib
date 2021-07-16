@@ -557,6 +557,7 @@ section{
   .item_list{
     padding: 25px;
   }
+  .ir_area{ min-width: auto; }
   .notice_list_date{ font-size: 14px; }
   .notice_list_title{ margin-top: 10px; font-size: 18px; }
   .stock .present_value{ font-size: 38px; }
